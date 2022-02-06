@@ -1,25 +1,41 @@
-* {
-  box-sizing: border-box;
+*, *::before, *::after {
+    word-break: break-all;
+    box-sizing: border-box;
 }
 
-.list {
+body {
+    color: #000;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 14px;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+div {
+    display: block;
+}
+
+li {
   list-style: none;
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
 
-header {
+.Header {
   width: 100%;
   position: absolute;
-  
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 36px 0 36px;
-  max-width: 100%;
-  position: relative;
+.HeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px 0 36px;
+    max-width: 100%;
+    position: relative;
 }
 
 a {
@@ -33,10 +49,15 @@ a {
   width: auto;
 }
 
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
 .HeaderLogo__image--sp {
-  display: none;
-  height: 16px;
-  width: auto;
+    display: none;
+    height: 16px;
+    width: auto;
 }
 
 .HeaderContainer>*:last-child {
@@ -47,72 +68,81 @@ a {
   display: none;
 }
 
-.header-list {
+.HeaderNavList {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
-.list {
+ul {
+  list-style: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.HeaderNavListItem {
   margin-right: 45px;
 }
 
-.list-show {
+.HeaderNavListItem__link {
   display: block;
 }
 
-.list-show>span:first-child {
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.HeaderNavListItem__link>span:first-child {
   font-family: 'Lato', sans-serif;
 }
 
-.list-show>span:last-child {
-    font-size: 10px;
-}
-
-.list-show>span {
+.HeaderNavListItem__link>span {
   display: block;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
 }
 
-.list:last-of-type {
-    margin-right: 0;
+.HeaderNavListItem__link>span:last-child {
+  font-size: 10px;
 }
 
-.list-radius {
-  align-items: center;
-  background-color: #F79214;
-  border: none;
-  border-radius: 38px;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  font-weight: 700;
-  justify-content: center;
-  text-decoration: none;
-  text-align: center;
-  width: 100%;
-  font-size: 12px;
-  height: 40px;
-  padding: 0 20px;
+.HeaderNavListItem:last-of-type {
+   margin-right: 0;
 }
 
-.list :hover {
-  opacity: 0.8;
+.HeaderNavListItem__button {
+    align-items: center;
+    background-color: #F79214;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    height: 40px;
+    padding: 0 20px;
 }
 
-.container {
-    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
-    background-size: cover;
-    background-position: center;
-    padding-top: 100px;
-    padding-bottom: 28px;
+main {
+  display: block;
 }
 
-img {
-  border: 0;
-  vertical-align: middle;
+.FirstView {
+  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 28px;
 }
 
 section {
@@ -120,14 +150,19 @@ section {
 }
 
 .FirstView__main-image--sp {
-    display: none;
+  display: none;
 }
 
 .FirstView__main-image {
   width: 100%;
 }
 
-.container-show {
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+.FirstView__container {
   max-width: 1140px;
   padding-left: 50px;
   padding-right: 50px;
@@ -136,12 +171,12 @@ section {
   position: relative;
 }
 
-.first-container {
+.FirstViewContent {
   margin-bottom: 70px;
   width: fit-content;
 }
 
- h2 {
+.FirstViewContent__title {
   color: #000;
   font-family: 'Lato', sans-serif;
   font-size: 38px;
@@ -167,22 +202,15 @@ section {
   margin-right: 0;
 }
 
-.contact-link {
+.FirstViewContent__buttons {
   display: flex;
 }
 
-.contact-link a:first-of-type {
-    margin-right: 15px;
-    color: white;
+.FirstViewContent__buttons a:first-of-type {
+  margin-right: 15px;
 }
 
-.contact-link a:last-of-type {
-  background-color: #fff;
-  border: 1px solid #E0E0E0;
-  color: #000;
-}
-
-.contact-link a {
+.FirstViewContent__buttons a {
   align-items: center;
   background-color: #F79214;
   border: none;
@@ -193,33 +221,37 @@ section {
   flex-direction: column;
   font-size: 16px;
   font-weight: 700;
-  height: 64px;
   justify-content: center;
   text-decoration: none;
   text-align: center;
-  width: 100%;
+  height: 64px;
 }
 
-.contact-link :hover {
-  opacity: 0.8;
+.FirstViewContent__buttons a:last-of-type {
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  color: #000;
 }
 
-.container-show p {
+.FirstViewCaption {
   color: #A2A2A4;
   font-size: 12px;
-  line-height: 15px;
 }
 
-.container-show a {
+p {
+  line-height: 1.5;
+}
+
+.FirstViewCaption a {
   color: #A2A2A4;
 }
 
-.about-wrapper {
-  padding: 45px 0;
+.AboutWrapper {
   background-color: #F79214;
+  padding: 45px 0;
 }
 
-.about-show {
+.About {
   max-width: 1140px;
   padding-left: 50px;
   padding-right: 50px;
@@ -231,7 +263,7 @@ section {
   justify-content: space-between;
 }
 
-.about-showItem {
+.About__title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -239,92 +271,66 @@ section {
   width: 53%;
 }
 
-h1 {
-  font-size: 30px;
+.About__title h2 {
+  font-size: 40px;
   letter-spacing: 1px;
   width: 100%;
-  
-  color: #fff;
-  text-align: left;
-  
   font-weight: 700;
   line-height: 74px;
 }
 
- h1>span {
+.About__title h2, .About__title p {
+  color: #fff;
+  text-align: left;
+}
+
+.About__title h2>span {
   font-size: 50px;
   font-family: 'Lato', sans-serif;
   font-weight: 900;
 }
 
-h1 br {
-  display: none;
-}
-
-.about-show p {
+.About__title p {
   font-size: 16px;
   font-weight: 700;
   line-height: 26px;
   margin-top: 15px;
-  
-  color: #fff;
-  text-align: left;
-  
-  display: inline-block;
 }
 
-.about-content {
+.About__title br {
+  display: none;
+}
+
+.About__button {
   width: 250px;
 }
 
-.about-content a {
-    align-items: center;
-    border: none;
-    border-radius: 38px;
-    color: #F79214;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: 700;
-    height: 64px;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    background-color: #fff;
-  
+.About__button a {
+  align-items: center;
+  border: none;
+  border-radius: 38px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+  height: 64px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  color: #F79214;
+  background-color: #fff;
 }
 
-.about-content  :hover {
-  opacity: 0.8;
+.About__button a span:first-child {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
 }
 
-span {
-  line-height: 1px;
-}  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.About__button a span:last-child {
+  font-size: 12px;
+  line-height: 18px;
+}
