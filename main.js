@@ -1,3 +1,9 @@
+const menu = document.querySelector('.jsc-hamburger')
+menu.addEventListener('click', function() {
+  POTEPANCAMP.HAMBURGER_MENU.init()
+  POTEPANCAMP.HAMBURGER_MENU.toggleMenu()
+})
+
 var POTEPANCAMP = POTEPANCAMP || {};
 POTEPANCAMP.HAMBURGER_MENU = {
   init: function () {
