@@ -3,18 +3,35 @@
     box-sizing: border-box;
 }
 
-body {
-    color: #000;
-    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    font-size: 14px;
+body, div, p, ul, ol, li, img, figure, h1, h2, h3,form, select {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
+  color: #000;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
 }
 
 div {
-    display: block;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.HeaderNavList {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -74,14 +91,6 @@ img {
   justify-content: space-between;
 }
 
-ul {
-  list-style: none;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-}
 
 .HeaderNavListItem {
   margin-right: 45px;
@@ -277,6 +286,8 @@ p {
   width: 100%;
   font-weight: 700;
   line-height: 74px;
+  margin: 0;
+  padding: 0;
 }
 
 .About__title h2, .About__title p {
